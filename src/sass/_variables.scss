@@ -1,0 +1,59 @@
+//Colors
+$white: #FFFFFF;
+$gray: #4D4D4D;
+$lightGray: #848484;
+$lightestGray: #F4F4F4;
+$darkGray: #313131;
+$chihulyColor: #ED523E;
+$zulilyColor: #9DA4BE;
+$dbColor: #ec8f27;
+$figColor: #FFD524;
+$articulateColor: #B2E66A;
+$captionTextColor: #9F9F9F;
+$footerTextColor: #6F6F6F;
+$homeColor: #5963D9;
+
+//Fonts
+$font-family-sans-serif: proxima-nova, "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-family-serif: mrs-eaves-xl-serif, Georgia, "Times New Roman", Times, serif;
+
+// Pixel value used to responsively scale all typography. Applied to the `<html>` element.
+$font-size-root: 17px;
+$body-color: #646464;
+
+$h1-font-size: 2rem;
+$h2-font-size: calc(2.5rem + .01*100vw);
+$h3-font-size: calc(1.8rem + .002*100vw);
+$h4-font-size: calc(1.1rem + .002*100vw);
+$h5-font-size: 1.25rem;
+$h6-font-size: 1rem;
+
+$line-height-base: 1.4;
+
+$headings-margin-bottom: 1rem;
+
+//Breakpoints
+$grid-breakpoints: (
+  // Extra small screen / phone
+  xs: 0,
+  // Small screen / phone
+  sm: 480px,
+  // Medium screen / tablet
+  md: 768px,
+  // Large screen / desktop
+  lg: 1080px,
+  // Extra large screen / wide desktop
+  xl: 1400px
+);
+
+// Grid columns
+$grid-columns: 12;
+$grid-gutter-width: 30px;
+
+//Hamburger Icon
+$button-width: 40px;                    // The width of the button area
+$button-height: 40px;                   // The height of the button area
+$bar-thickness: 3px;                    // The thickness of the button bars
+$button-pad: 6px;                      // The leftight padding between button area and bars.
+$button-bar-space: 6px;                // The spacing between button bars
+$button-transistion-duration: 0.2s;     // The transition duration

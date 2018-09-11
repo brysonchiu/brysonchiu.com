@@ -1,0 +1,164 @@
+.chihuly #aboveFold {
+	#heroImg img {
+	}
+}
+.chihuly #belowFold {
+	.mobile.row {
+		padding: 5em 0 16vw;
+		position: relative;
+		@include breakpoint(tablet) {
+			padding-bottom: 0;
+			padding-top: 3em;
+		}
+		.gradient {
+			bottom: 20%;
+		}
+	}
+	.mobileImage {
+		position: relative;
+		img:first-of-type {
+			position: absolute;
+			top: 30%;
+			@include breakpoint(tablet) {
+				top: auto;
+				display: none;
+			}
+		}
+		img:nth-of-type(2) {
+			opacity: 0;
+			@include breakpoint(tablet) {
+				opacity: 1;
+			}
+		}
+	}
+	.iphoneIpad.row, .ipad.row {
+		padding: 2vw 0;
+		@include breakpoint(tablet) {
+			padding-top: 0;
+			padding-bottom: 0;
+			text-align: center;
+		}
+	}
+	.ipad.row {
+		padding-top: 5vw;
+		@include breakpoint(tablet) {
+			padding-top: 0;
+			padding-bottom: 0;
+		}
+	}
+	img {
+		&.iphone {
+			@include breakpoint(phone) {
+				max-width: 50%;
+			}
+		}
+		&.ipad {
+			@include breakpoint(phone) {
+				max-width: 75%;
+			}
+		}
+	}
+	.publications {
+		.text {
+			@include breakpoint(tablet){
+				padding-top: 3vw;
+			}
+		}
+	}
+	.publicationCovers {
+		img {
+			display: block;
+			width: 33.33%;
+			float: left;
+			@include breakpoint(tablet) {
+				width: 100%;
+				padding-top: 2.5vw;
+				padding-bottom: 2.5vw;
+			}
+		}
+	}
+	.packaging.row {
+		background-image: url('img/chihuly-dvd-set-lifestyle-blur.jpg');
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center center;
+		min-height: 75vh;
+		color: $white;
+		h3 {
+			color: $white;
+		}
+	}
+	.dvdSetOpen.row {
+		padding: 10vw 0;
+	}
+	.dvdSet.row {
+		position: relative;
+		background-repeat: repeat-x;
+		background-position: top;
+		background-size: 1px 160px;
+		padding-top: 0;
+		overflow: hidden;
+		.gradient {
+			top: 0;
+		}
+		.text {
+			padding-top: 40px;
+			@include breakpoint(tablet){
+				padding-top: 3vw;
+				padding-bottom: 6vw;
+			}
+		}
+		.image {
+			@include breakpoint(tablet){
+				padding-top: 0;
+			}
+			img {
+				@include breakpoint(desktop){
+					min-width: 500px;
+				}
+			}
+		}
+	}
+	.pencilsLifestyle {
+		padding: 0;
+		position: relative;
+		overflow: hidden;
+		.text {
+			padding-top: 40px;
+			padding-bottom: 40px;
+			@include breakpoint(tablet){
+				padding-top: 3vw;
+				padding-bottom: 3vw;
+			}
+		}
+		.image {
+			@include breakpoint(desktop){
+				position: relative;
+				min-height: 380px;
+			}
+			@include breakpoint(tablet){
+				padding-top: 0;
+			}
+			img {
+				@include breakpoint(desktop){
+					min-width: 570px;
+					position: absolute;
+					right: 0;
+				}
+			}
+		}
+	}
+	.pencilTube {
+		@include breakpoint(tablet){
+			padding-top: 9vw;
+			padding-bottom: 3vw;
+		}
+	}
+	.marketingMaterial {
+		.text {
+			@include breakpoint(tablet){
+				padding-top: 6vw;
+			}
+		}
+	}
+}

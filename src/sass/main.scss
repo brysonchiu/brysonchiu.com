@@ -1,0 +1,15 @@
+//Import Variables+mixings
+@import "variables";
+@import "mixins";
+
+//Import Bootstrap
+@import "~bootstrap/scss/bootstrap";
+
+//Import Partials
+@import "partials/homepage";
+@import "partials/projects";
+@import "partials/articulate";
+@import "partials/flatIronGrill";
+@import "partials/dahliaBarn";
+@import "partials/zulily";
+@import "partials/chihuly";

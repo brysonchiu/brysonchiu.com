@@ -1,0 +1,59 @@
+.zulily #belowFold {
+	.designText {
+		padding-top: 5em;
+	}
+	.laptopEvents {
+		position: relative;
+		padding-top: 2.5vw;
+		.gray {
+			background: $lightestGray;
+			height: 40%;
+			position: absolute;
+			bottom: 0;
+			width: 100%;
+			z-index: -1;
+			visibility: visible;
+			@include opacity(1);
+			@include translate(0, 0);
+		}
+	}
+	.events {
+		background: $lightestGray;
+		padding-top: 0;
+		padding-bottom: 8em;
+		@include breakpoint(tablet) {
+			padding-bottom: 5em;
+		}
+	}
+	.uxText {
+		padding-top: 5em;
+	}
+	.productCountIndicators img {
+		@include breakpoint(tablet) {
+			width: 50%;
+			float: left;
+			display: block;
+		}
+		&:first-of-type {
+			@include breakpoint(tablet) {
+				padding-right: 5px;
+			}
+		}
+		&:nth-child(3) {
+			@include breakpoint(tablet) {
+				padding-left: 5px;
+			}
+		}
+	}
+	.features_bottom {
+		padding-bottom: 8em;
+		@include breakpoint(tablet) {
+			padding-bottom: 5em;
+		}
+	}
+	.grid {
+		@include breakpoint(phone){
+			margin: 0 20%;
+		}
+	}
+}

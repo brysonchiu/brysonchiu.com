@@ -1,0 +1,26 @@
+.flatIronGrill #belowFold {
+	.row {
+		padding-top: 7.5vw;
+		padding-bottom: 7.5vw;
+		@include breakpoint(phone) {
+			padding: 2.5em 0;
+		}
+	}
+	.text {
+		min-height: 75vh;
+		@include breakpoint(phone) {
+			min-height: 0;
+			padding: 5em 0;
+		}
+	}
+	.brunch {
+		background: #171717;
+	}
+	.whiskeyEvents {
+		background: $lightestGray;
+		padding-bottom: 10vw;
+	}
+}
+.flatIronGrill #footer {
+	margin-top: 0;
+}

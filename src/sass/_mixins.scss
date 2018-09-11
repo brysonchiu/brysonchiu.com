@@ -1,0 +1,67 @@
+//mixins
+@mixin rotate($degree, $y, $x) {
+	transform: rotate($degree);
+	transform-origin: ($y $x);
+}
+@mixin scale($value) {
+	transform: scale($value);
+}
+@mixin translate($x, $y) {
+ 	transform: translate($x, $y);
+}
+@mixin opacity($opacity) {
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity="$opacity * 100")";
+	filter: alpha(opacity=$opacity * 100); // IE 5-7
+	opacity: $opacity;
+}
+@mixin transitions($property, $duration, $ease, $delay) {
+	transition: $property $duration $ease $delay;
+}
+@mixin shadow($x, $y, $blur, $spread, $color) {
+	box-shadow: $x $y $blur $spread $color;
+}
+@mixin fadeInObject() {
+	visibility: hidden;
+	@include opacity(0);
+	@include translate(0, 200px);
+	transition: transform 1.5s cubic-bezier(0,.72,.32,1.05), opacity 1.5s cubic-bezier(0,.72,.32,1.05);
+	&.fadeIn {
+		visibility: visible;
+		@include opacity(1);
+		@include translate(0, 0)
+	}
+}
+@mixin flex($align, $justify) {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: $align;
+	-ms-flex-align: $align;
+	align-items: $align;
+	-webkit-box-pack: $justify;
+	-ms-flex-pack: $justify;
+	justify-content: $justify;
+}
+@mixin flexOrder ($position) {
+	order: $position;
+}
+@mixin breakpoint($class) {
+  @if $class == phone {
+    @media (max-width: 480px) { @content; }
+  }
+  @else if $class == tablet {
+    @media (max-width: 768px) { @content; }
+  }
+  @else if $class == desktop {
+    @media (min-width: 769px) { @content; }
+  }
+	@else if $class == smdesktop {
+    @media (min-width: 769px) and (max-width: 1080px) { @content; }
+  }
+	@else if $class == lgdesktop {
+    @media (min-width: 1081px) { @content; }
+  }
+  @else {
+    @warn "Breakpoint mixin supports: xs, sm, md, lg";
+  }
+}

@@ -1,0 +1,132 @@
+.articulate #heroImg {
+	img {
+		@include breakpoint(desktop){
+			min-width: 750px;
+		}
+		margin-bottom: .5em;
+	}
+}
+.articulate #belowFold {
+	.symbolsText {
+		margin-top: 3em;
+		img {
+			@include breakpoint(desktop){
+				width: 110%;
+				left: 0;
+				min-width: 600px;
+			}
+		}
+		.combinedSymbols {
+			overflow: hidden;
+		}
+	}
+	.pen {
+		@include breakpoint(smdesktop){
+			display: none;
+		}
+	}
+	.symbols {
+		margin-bottom: 2.5em;
+		@include breakpoint(tablet){
+			margin-top: 5em;
+			margin-bottom: 5em;
+		}
+		div {
+			@include breakpoint(tablet){
+				overflow: hidden;
+			}
+		}
+		.caption {
+			margin-bottom: 30px;
+			@include breakpoint(tablet){
+				margin-bottom: 0;
+			}
+		}
+		img {
+			min-width: 700px;
+			@include breakpoint(desktop){
+				margin: 20px 0;
+			}
+		}
+	}
+	.paperGoods {
+		background: $lightestGray;
+		margin-left: -15px;
+		margin-right: -15px;
+		padding-top: 2.5em;
+		padding-bottom: 6.5em;
+		@include breakpoint(tablet){
+			padding-top: 5em;
+			padding-bottom: 4em;
+		}
+		.row {
+			padding-top: 2.5vw;
+			padding-bottom: 2.5vw;
+			margin-left: 0;
+			margin-right: 0;
+		}
+	}
+	.poster {
+		@include breakpoint(tablet){
+			display: none;
+		}
+	}
+	.posters {
+		position: relative;
+		@include breakpoint(tablet){
+			margin-bottom: 190%;
+		}
+		@include breakpoint(phone){
+			margin-bottom: 210%;
+		}
+	}
+	.posters img {
+		float: left;
+		width: 32%;
+		display: block;
+		position: relative;
+		@include breakpoint(tablet){
+			width: calc(75% - 30px);
+			position: absolute;
+		}
+		&:nth-child(2), &:nth-child(3) {
+			@include breakpoint(tablet){
+				top: -50%;
+			}
+		}
+		&:nth-child(1) {
+			z-index: 1;
+			margin-right: 2%;
+			@include breakpoint(tablet){
+				margin-right: 0;
+			}
+		}
+		&:nth-child(2) {
+			z-index: 2;
+			margin-right: 2%;
+			@include breakpoint(tablet){
+				margin-right: 0;
+				margin-left: 12.5%;
+				top: 50vw;
+			}
+		}
+		&:nth-child(3) {
+			z-index: 3;
+			@include breakpoint(tablet){
+				top: 100vw;
+				margin-left: 25%;
+			}
+		}
+	}
+	.row.postcard {
+		@include breakpoint(tablet){
+			padding-top: 2.5em;
+		}
+		img {
+			margin-bottom: 1em;
+		}
+	}
+}
+.articulate #footer {
+	margin-top: 0;
+}
